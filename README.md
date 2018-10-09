@@ -21,5 +21,5 @@ Follow the instructions in this [link](https://gnu-mcu-eclipse.github.io/openocd
 5. Enter `c` to allow the chip to go ahead witht the program. You can find more detailed OpenOCD commands [here](http://condor.depaul.edu/glancast/373class/docs/gdb.html).
 
 ## IMPORTANT: 
-## You need to edit the paths in the `CMakeList.txt` to match the installation paths of the above mentioned software packages to be able to use them.
-## The order in which you open `OpenOCD` and `GDB` matters
+### You need to edit the paths in the `CMakeList.txt` to match the installation paths of the above mentioned software packages to be able to use them.
+### The order in which you open `OpenOCD` and `GDB` matters
