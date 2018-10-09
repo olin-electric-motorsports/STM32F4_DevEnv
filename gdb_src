@@ -1,0 +1,5 @@
+target remote:localhost 3333
+
+file path/to/your/binary/file
+
+monitor arm semihosting enable
