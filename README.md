@@ -10,8 +10,8 @@ Follow the instructions in this [link](https://gnu-mcu-eclipse.github.io/toolcha
 Follow the instructions in this [link](https://gnu-mcu-eclipse.github.io/openocd/install/) to install `OpenOCD`.
 ### STM32F4 Hardware Abstraction Layer
 1. Mount the network drive `Sandbox (\\fsvs01)` to your Ubuntu partition. Instructions are available [here](http://wikis.olin.edu/linux/doku.php?id=accessing_windows_shares).
-2. Copy `en.stm32cubef4.zip` to your local direction somewhere.
-3. Unzip the folder.
+2. Copy `en.stm32cubef4.zip` from `Sandbox (\\fsvs01)` to your local direction somewhere.
+3. Unzip the folder in the directory of this repository.
 
 ## Flashing your board
 1. Open `OpenOCD` by running your edited bash file with `bash openocd.sh`
