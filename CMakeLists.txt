@@ -30,7 +30,7 @@ link_directories(
 
 # ========================================================================
 set (STARTUP
-    ${CMAKE_SOURCE_DIR}/src/startup_stm32f407xx.s
+    ${CMAKE_SOURCE_DIR}/startup_stm32f407xx.s
 )
 
 set (STM_SRC
