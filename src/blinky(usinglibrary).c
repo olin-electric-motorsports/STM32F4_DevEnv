@@ -1,3 +1,12 @@
+/**
+  ******************************************************************************
+  * @file    blinky(usinglibrary).c
+  * @author  Sherrie Shen & Josh Deng
+  * @brief   Blinky using stm32 HAL
+  *
+  This script flashes 4 LEDs on the board and run the system clock at full 168 MHz.
+  */
+
 #include "stm32f4xx_hal.h"
 #include "stm32f407xx.h"
 #include "stm32f4xx.h"
