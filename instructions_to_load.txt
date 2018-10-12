@@ -1,0 +1,15 @@
+# open a terminal
+cd ~/Documents/Formula/build
+cmake ..
+make Research
+
+# open a second terminal
+cd ~/Documents/Formula
+bash openocd.sh
+
+# open a third terminal
+cd ~/Documents/Formula
+bash gdb.sh
+source gdb_src
+load
+continue
