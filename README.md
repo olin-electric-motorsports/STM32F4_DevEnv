@@ -3,9 +3,17 @@ STM32F4 Development Environment
 
 ## Installing
 ### CMake
-Follow this [link](https://cmake.org/download/) to download the bash file for Linux and install the latest version of CMake. Example of bash file for Ubuntu `cmake-3.12.2-Linux-x86_64.sh`. To install cmake from `.sh` file downloaded run the command below:
-
-`bash <path to .sh file downloaded>`
+Follow this [link](https://cmake.org/download/) to download the bash file for Linux and install the latest version of CMake. Example of bash file for Ubuntu `cmake-3.12.2-Linux-x86_64.sh`. To install cmake from `.sh` file downloaded run the commands similar to the following:
+```
+wget https://cmake.org/files/v$version/cmake-$version.$build-Linux-x86_64.sh 
+sudo mkdir /opt/cmake
+sudo sh cmake-$version.$build-Linux-x86_64.sh --prefix=/opt/cmake
+```
+Answer `Y` for license and answer `N` for including subdirectory. Then, add your binary link for Cmake.
+```
+sudo ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake
+```
+Test your Cmake by typing in `cmake --version`
 
 ### GNU-MCU-ECLIPSE
 A detailed instructions and troubleshooting can be followed in this [link](https://gnu-mcu-eclipse.github.io/toolchain/arm/install/#target-vs-host-platform) to install GNU MCU Eclipse ARM Embedded GCC. The official webpage of gnu instructs installing the compiler in the `/opt` folder but is not necessary. In the `CMakeList.txt`, the path to the compiler is pointed to the folder of this repository. A quick installation instruction can be followed below:
