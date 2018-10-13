@@ -33,3 +33,4 @@
 
 build/
 STM32Cube_FW_F4_V1.21.0/
+gnu-mcu-eclipse/

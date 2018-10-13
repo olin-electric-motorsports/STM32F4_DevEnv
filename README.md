@@ -5,7 +5,7 @@ STM32F4 Development Environment
 ### CMake
 Follow this [link](https://cmake.org/download/) to download the bash file for Linux and install the latest version of CMake. Example of bash file for Ubuntu `cmake-3.12.2-Linux-x86_64.sh`. To install cmake from `.sh` file downloaded run the commands similar to the following:
 ```
-wget https://cmake.org/files/v$version/cmake-$version.$build-Linux-x86_64.sh 
+wget https://cmake.org/files/v$version/cmake-$version.$build-Linux-x86_64.sh
 sudo mkdir /opt/cmake
 sudo sh cmake-$version.$build-Linux-x86_64.sh --prefix=/opt/cmake
 ```
@@ -49,10 +49,10 @@ The order of commands are described in `instructions_to_load.txt` in this reposi
 4. Enter `load` to load the program onto the STM32 chip.
 5. Enter `c` to allow the chip to go ahead witht the program. You can find more detailed OpenOCD commands [here](http://condor.depaul.edu/glancast/373class/docs/gdb.html).
 
+[This](https://www.segger.com/products/debug-probes/j-link/models/j-link-edu-mini/) makes a good and economical programmer when you don't have a dev board with ST-Link.
+
+
 ## IMPORTANT:
-### You need to edit the paths in the `CMakeList.txt` to match the installation paths of the above mentioned software packages to be able to use them. Lines need to be adjusted include:
-* `set (CMAKE_ASM_COMPILER /path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc)`
-* `CMAKE_FORCE_C_COMPILER (/path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc GNU)`
-* `CMAKE_FORCE_CXX_COMPILER (/path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-g++ GNU)`
+### You need to configure your file/folder placements exactly as described because all path in `CMake.list` is relative.
 
 ### The order in which you open `OpenOCD` and `GDB` matters

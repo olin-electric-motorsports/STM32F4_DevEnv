@@ -6,12 +6,14 @@ include(CMakeForceCompiler)
 set (CMAKE_SYSTEM_NAME Generic)
 set (CMAKE_CROSSCOMPILING 1)
 enable_language (ASM)
-set (CMAKE_ASM_COMPILER /path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc)
-CMAKE_FORCE_C_COMPILER (/path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc GNU)
-CMAKE_FORCE_CXX_COMPILER (/path/to/your/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-g++ GNU)
 
 # Define repository directory structure
 set (ST_LIB_DIR "${CMAKE_SOURCE_DIR}/STM32Cube_FW_F4_V1.21.0")
+
+set (CMAKE_ASM_COMPILER ${CMAKE_SOURCE_DIR}/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc)
+CMAKE_FORCE_C_COMPILER (${CMAKE_SOURCE_DIR}/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-gcc GNU)
+CMAKE_FORCE_CXX_COMPILER (${CMAKE_SOURCE_DIR}/gnu-mcu-eclipse/arm-none-eabi-gcc/7.3.1-1.1-20180724-0637/bin/arm-none-eabi-g++ GNU)
+
 
 # Identify include for project, CMSIS, and STM drivers
 include_directories (
@@ -30,7 +32,7 @@ link_directories(
 
 # ========================================================================
 set (STARTUP
-    ${CMAKE_SOURCE_DIR}/startup_stm32f407xx.s
+    ${CMAKE_SOURCE_DIR}/src/startup_stm32f407xx.s
 )
 
 set (STM_SRC
@@ -54,7 +56,7 @@ add_library(STM ${STM_SRC})
 
 # add shortcut
 set (APP_SRC
-    ${CMAKE_SOURCE_DIR}/src/blink.cc
+    ${CMAKE_SOURCE_DIR}/src/main.cc
 )
 
 set (CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -c")
