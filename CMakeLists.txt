@@ -56,7 +56,7 @@ add_library(STM ${STM_SRC})
 
 # add shortcut
 set (APP_SRC
-    ${CMAKE_SOURCE_DIR}/src/main.cc
+    ${CMAKE_SOURCE_DIR}/src/blinky.c
 )
 
 set (CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -c")
